@@ -16,6 +16,7 @@ const Avatar: React.FC<AvatarProps> = ({
   return (
     <img
       className={`${className} rounded-full m-auto`}
+      alt="avatar"
       src={imageUrl}
       height={height}
       width={width}
