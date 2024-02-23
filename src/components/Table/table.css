@@ -1,0 +1,18 @@
+.table {
+    width: 100%;
+    table-layout: fixed;
+    /* Ensure consistent column widths */
+}
+
+.table th,
+.table td {
+    width: auto;
+    /* Allow columns to adjust based on content */
+}
+
+
+.table-container {
+    max-width: 100%;
+    /* Adjust as needed */
+    overflow-x: auto;
+}
