@@ -30,7 +30,7 @@ const Filtering: React.FC<FilteringProps> = ({
         <option value="">Select to filter</option>
         {fields.map(
           (field: string, i: number) =>
-            displayFields[i] != "Avatar" && (
+            displayFields[i] !== "Avatar" && (
               <option key={field} value={field}>
                 {displayFields[i]}
               </option>
