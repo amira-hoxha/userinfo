@@ -22,12 +22,12 @@ const Filtering: React.FC<FilteringProps> = ({
   };
 
   return (
-    <div className="py-4 flex items-center">
+    <div className="py-4 flex justify-center sm:justify-normal items-center">
       <select
         className="bg-gray-700 text-white px-3 py-2 rounded-md border border-gray-600 focus:outline-none focus:ring focus:ring-gray-300 mr-2"
         onChange={handleFilterChange}
       >
-        <option value="">Select Field to Filter</option>
+        <option value="">Select to filter</option>
         {fields.map((field: string, i: number) => (
           <option key={field} value={field}>
             {displayFields[i]}

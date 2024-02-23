@@ -20,7 +20,7 @@ const Sorting: React.FC<SortingProps> = ({
   };
 
   return (
-    <div className="pl-2">
+    <div className="pl-2 justify-center sm:justify-normal flex">
       <label htmlFor="sortBy" className="text-white mr-2">
         Sort by:
       </label>

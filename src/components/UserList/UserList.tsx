@@ -56,7 +56,7 @@ const UserList: React.FC = () => {
     { field: "lastName", header: "Last Name" },
     { field: "email", header: "Email" },
     { field: "age", header: "Age" },
-
+    { field: "image", header: "Avatar" },
     // Add more columns as needed
   ];
 

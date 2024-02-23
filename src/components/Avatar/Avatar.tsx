@@ -4,15 +4,21 @@ interface AvatarProps {
   height: string;
   width: string;
   imageUrl?: string;
+  className?: string;
 }
 
-const Avatar: React.FC<AvatarProps> = ({ height, width, imageUrl }) => {
+const Avatar: React.FC<AvatarProps> = ({
+  height,
+  width,
+  imageUrl,
+  className,
+}) => {
   return (
     <img
-      className="rounded-full"
+      className={`${className} rounded-full m-auto`}
+      src={imageUrl}
       height={height}
       width={width}
-      src={imageUrl}
     />
   );
 };

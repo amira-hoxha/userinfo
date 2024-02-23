@@ -56,7 +56,7 @@ const Table: React.FC<TableProps> = ({
   const currentItemPage = sortedData.slice(firstItemIndex, lastItemIndex);
 
   return (
-    <div className="overflow-x-auto text-white mx-4 table-container">
+    <div className="overflow-x-auto text-white sm:mx-4 table-container">
       <Sorting
         fields={columns.map((column) => column.field)}
         displayFields={columns.map((column) => column.header)}
@@ -69,10 +69,10 @@ const Table: React.FC<TableProps> = ({
         onFilterChange={handleFilterChange}
         onSearch={handleSearch}
       />
-      <div className="shadow-lg rounded-lg overflow-x-auto table-responsive">
+      <div className="flex items-center sm:justify-center mx-4 sm:mx-0 shadow-lg rounded-lg overflow-x-auto table-responsive">
         <table className="min-w-full divide-y divide-gray-700">
           <thead className="bg-gray-700">
-            <tr>
+            <tr className="hidden sm:table-row">
               {columns.map((column, index) => (
                 <th
                   key={index}
@@ -89,6 +89,7 @@ const Table: React.FC<TableProps> = ({
               <TableRow
                 key={i}
                 items={columns.map((column) => item[column.field])}
+                column={columns[i]?.field}
                 showRowDetails={showRowDetails} // Pass fetchData as a prop
                 id={item.id}
                 detailsVisibleText={detailsVisibleText}
