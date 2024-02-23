@@ -28,11 +28,14 @@ const Filtering: React.FC<FilteringProps> = ({
         onChange={handleFilterChange}
       >
         <option value="">Select to filter</option>
-        {fields.map((field: string, i: number) => (
-          <option key={field} value={field}>
-            {displayFields[i]}
-          </option>
-        ))}
+        {fields.map(
+          (field: string, i: number) =>
+            displayFields[i] != "Avatar" && (
+              <option key={field} value={field}>
+                {displayFields[i]}
+              </option>
+            )
+        )}
       </select>
       <input
         className="text-white px-3 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring focus:ring-gray-300"
